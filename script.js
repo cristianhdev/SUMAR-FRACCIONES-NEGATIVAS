@@ -385,9 +385,11 @@ function comprobar() {
 		}
 
 	}
+}
 
 
-
+function Actividad1(){
+	
 }
 
 function repetirTextosEscena(slide) {
