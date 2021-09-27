@@ -1,6 +1,6 @@
 
 
-let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4']
+let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4','slide-5']
 let audios_sond = ['Audio1', '', '']
 //Arrays Para configurar los numeros.
 let respuestasJuegoDemo = [5, 3, 7, 4, 4, 1, 4]
@@ -239,6 +239,18 @@ function loadArrayInputsActividad2() {
 	return [input1Actividad2, input2Actividad2, input3Actividad2, input4Actividad2, input5Actividad2, input6Actividad2]
 }
 
+function loadArrayInputsActividad3() {
+
+	let input1Actividad3 = document.getElementById('InputC1').value//InputFormula1-0
+	let input2Actividad3 = document.getElementById('InputC2').value//InputFormula2-1
+	let input3Actividad3 = document.getElementById('InputC3').value//InputFormula3-2
+	let input4Actividad3 = document.getElementById('InputC4').value//Resultado1-3
+	let input5Actividad3 = document.getElementById('InputC5').value//Resultado2-4
+	let input6Actividad3 = document.getElementById('InputC6').value//InputFormula4-5
+	let input7Actividad3 = document.getElementById('InputC7').value//InputFormula4-5
+	return [input1Actividad3, input2Actividad3, input3Actividad3, input4Actividad3, input5Actividad3, input6Actividad3,input7Actividad3]
+}
+
 function mostrarMensajeActividad() {
 	switch (getCurrentSlider()) {
 		case 1:
@@ -253,6 +265,10 @@ function mostrarMensajeActividad() {
 		case 3:
 			document.getElementById('mensajeActividad2').style.visibility = 'visible'
 			document.getElementById('mensajeActividad2').style.color = 'red'
+			break;
+		case 4:
+			document.getElementById('mensajeActividad3').style.visibility = 'visible'
+			document.getElementById('mensajeActividad3').style.color = 'red'
 			break;
 
 		default:
@@ -270,6 +286,14 @@ function ocultarMensajeActividad() {
 		case 2:
 			document.getElementById('mensajeActividad').style.visibility = 'hidden'
 			document.getElementById('mensajeActividad').style.color = 'red'
+			break;
+		case 3:
+			document.getElementById('mensajeActividad2').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad2').style.color = 'red'
+			break;
+		case 4:
+			document.getElementById('mensajeActividad3').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad3').style.color = 'red'
 			break;
 
 		default:
@@ -299,6 +323,11 @@ function comprobar() {
 			ReiniciarVariablesActividad()
 			arrayvalidador = loadArrayInputsActividad2()
 			Actividad3(arrayvalidador);
+			break;
+		case 4:
+			ReiniciarVariablesActividad()
+			arrayvalidador = loadArrayInputsActividad3()
+			Actividad4(arrayvalidador,'resultado-1-actividad3','resultado-2-actividad3','contenedorResultado-actividad3');
 			break;
 
 		default:
@@ -530,6 +559,81 @@ function Actividad3(arrayInputs) {
 			}
 		} else {
 			document.getElementById('resultado-1-actividad2').classList.add('imagen-incorrecta')
+		}
+
+	}
+}
+
+/**
+ * 
+ * @param {Array que contiene los valores de los inputs} arrayInputs 
+ * @param {Representa el id que  contiene el validador operacion1 (bueno o malo)} idresultadoOperacion1 
+ * @param {Representa el id que  contiene el validador operacion2 (bueno o malo)} idresultadoOperacion2 
+ * @param {Representa el id del contenedor que muestra el resultado} idContenedorResultado 
+ */
+function Actividad4(arrayInputs,idresultadoOperacion1,idresultadoOperacion2,idContenedorResultado) {
+	let resultadofind = arrayInputs.includes("")
+
+
+	if (!resultadofind) {
+		camposValidos = true
+
+	} else {
+		mostrarMensajeActividad()
+
+	}
+
+	if (camposValidos) {
+		ocultarMensajeActividad()
+		//Validamos las 3 primaras cajas.
+		if (arrayInputs[2] == (parseInt(arrayInputs[0]) * parseInt(arrayInputs[6]))) {
+			operacion1 = true
+		} else {
+			operacion1 = operacion1
+		}
+
+
+		//validamos la ultima caja de la formula.
+		if (arrayInputs[3]== (parseInt(arrayInputs[5]) * parseInt(arrayInputs[1]))) {
+			operacion2 = true
+		} else {
+			operacion2 = operacion2
+		}
+
+		if (operacion1 && operacion2) {
+			/* document.getElementById('contenedorResultado').style.visibility = "visible" */
+			document.getElementById(idresultadoOperacion1).classList.add('imagen-correcta')
+
+			
+
+			if (parseInt(arrayInputs[4]) === parseInt(arrayInputs[2]) + parseInt(arrayInputs[3])) {
+				numerador = true
+			} else {
+				numerador = numerador
+			}
+
+			if (arrayInputs[8] == arrayInputs[7]) {
+				denominador = true
+			} else {
+				denominador = denominador
+			}
+
+			
+			if (numerador == true && denominador == true) {
+				document.getElementById('btnContinuar-demo').classList.remove('enabled')
+				document.getElementById(idContenedorResultado).style.visibility = "visible"
+				document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
+
+			}
+			else {
+				document.getElementById('btnContinuar-demo').classList.add('enabled')
+				document.getElementById(idContenedorResultado).style.visibility = "visible"
+				document.getElementById(idresultadoOperacion2).classList.add('imagen-incorrecta')
+
+
+			}
+		} else {
+			document.getElementById(idresultadoOperacion1).classList.add('imagen-incorrecta')
 		}
 
 	}

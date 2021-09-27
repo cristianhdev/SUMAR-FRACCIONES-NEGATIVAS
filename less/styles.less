@@ -129,6 +129,7 @@ span {
 
 #mensajeActividad,
 #mensajeActividad2, 
+#mensajeActividad3, 
 #mensajeActividadDemo {
     text-align: center;
     display: inline-block;
@@ -237,6 +238,21 @@ input[type="phone"] {
     margin: 0px auto;
 }
 
+.contenedor-inputs-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url(./public/assets/Img/images/operadores4.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18vh;
+    background-size: 77%;
+    width: 100%;
+    margin: 0px auto;
+}
+
 
 
 .contenedor .row {
@@ -248,7 +264,8 @@ input[type="phone"] {
 
 #slide-2,
 #slide-3,
-#slide-4 {
+#slide-4,
+#slide-5 {
     display: none
 }
 
@@ -557,6 +574,13 @@ input[type="phone"] {
     justify-content: flex-end;
 }
 
+.contenedor-resultados-juego3 {
+    width: 100%;
+    /* padding-right: 89px; */
+    display: flex;
+    justify-content: flex-end;
+}
+
 .contenedor-resultados-demo {
     width: 100%;
     padding-right: 89px;
@@ -611,6 +635,21 @@ input[type="phone"] {
 }
 
 #resultado-2-actividad2 {
+    display: inline-block;
+    width: 33% !important;
+    text-align: center;
+    height: 51px;
+}
+
+#resultado-1-actividad3 {
+    width: 15%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+#resultado-2-actividad3 {
     display: inline-block;
     width: 33% !important;
     text-align: center;
@@ -784,7 +823,14 @@ input[type="phone"] {
 #InputB3,
 #InputB4,
 #InputB5,
-#InputB6{
+#InputB6,
+#InputC1,
+#InputC2,
+#InputC3,
+#InputC4,
+#InputC5,
+#InputC6,
+#InputC7{
     width: 6%;
     padding: 0px 9px;
     margin: 14px 2px;
@@ -822,7 +868,46 @@ input[type="phone"] {
     right: 38%;
 }
 
+#InputC1{
+    position: relative;
+    left: 13px;
+}
 
+#InputC2{
+    position: relative;
+    left: -31px;
+}
+
+#InputC3{
+    position: relative;
+    left: -35px;
+}
+
+#InputC4{
+    position: relative;
+    left: -40px;
+}
+
+#InputC6{
+    position: relative;
+    left: -21px;
+}
+#InputC5{
+    position: relative;
+    left: -30px;
+}
+
+
+
+#InputC7{
+    position: relative;
+    left: -100px;
+}
+
+#InputC8{
+    position: relative;
+    left: -53px;
+}
 
 /* 
   ##Device = Desktops
@@ -1313,7 +1398,8 @@ input[type="phone"] {
 
     .recuadro-explicacion-1,
     .recuadro-explicacion-2,
-    .recuadro-explicacion-4 {
+    .recuadro-explicacion-4,
+    .recuadro-explicacion-5 {
         height: 87%;
     }
 
@@ -1332,7 +1418,14 @@ input[type="phone"] {
     #demo6,
     #demo7,
     #demo8,
-    #demo9 {
+    #demo9,
+    #InputC1,
+    #InputC2,
+    #InputC3,
+    #InputC4,
+    #InputC5,
+    #InputC6,
+    #InputC7{
         width: 19px;
         padding: 0px 0px;
         margin: 4px 2px
@@ -1507,6 +1600,7 @@ input[type="phone"] {
 
     #mensajeActividad,
     #mensajeActividad2,
+    #mensajeActividad3,
     #mensajeActividadDemo {
         font-size: 12px;
         text-align: center;
