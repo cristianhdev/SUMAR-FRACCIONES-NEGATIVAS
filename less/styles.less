@@ -128,6 +128,7 @@ span {
 }
 
 #mensajeActividad,
+#mensajeActividad2, 
 #mensajeActividadDemo {
     text-align: center;
     display: inline-block;
@@ -213,6 +214,21 @@ input[type="phone"] {
     align-items: center;
     flex-wrap: nowrap;
     background-image: url(./public/assets/Img/images/operadores.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18vh;
+    background-size: contain;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.contenedor-inputs-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url(./public/assets/Img/images/operadores2.png);
     background-repeat: no-repeat;
     background-position: center center;
     height: 18vh;
@@ -527,6 +543,20 @@ input[type="phone"] {
     justify-content: flex-end;
 }
 
+.contenedor-resultados-juego1 {
+    width: 100%;
+    /* padding-right: 89px; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-resultados-juego2 {
+    width: 100%;
+    /* padding-right: 89px; */
+    display: flex;
+    justify-content: flex-end;
+}
+
 .contenedor-resultados-demo {
     width: 100%;
     padding-right: 89px;
@@ -557,7 +587,51 @@ input[type="phone"] {
     padding-top: 0px;
 }
 
+#resultado-1-actividad1 {
+    width: 24%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+#resultado-2-actividad1 {
+    display: inline-block;
+    width: 16% !important;
+    text-align: center;
+    height: 51px;
+}
+
+#resultado-1-actividad2 {
+    width: 15%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+#resultado-2-actividad2 {
+    display: inline-block;
+    width: 33% !important;
+    text-align: center;
+    height: 51px;
+}
+
+#resultado-3-actividad1 {
+    display: inline-block;
+    width: 18% !important;
+    text-align: right;
+    height: 51px;
+}
+
 #resultado-2-actividad {
+    display: inline-block;
+    width: 4% !important;
+    text-align: right;
+    height: 51px;
+}
+
+#resultado-3-actividad {
     display: inline-block;
     width: 4% !important;
     text-align: right;
@@ -627,12 +701,13 @@ input[type="phone"] {
 
 #input10 {
     position: relative;
-    left: 36%;
+    left: 162px;
 }
 
 #input11 {
     position: relative;
-    left: 100px;
+    left: 31%;
+    
 }
 
 #demo1 {
@@ -703,10 +778,48 @@ input[type="phone"] {
 #demo6,
 #demo7,
 #demo8,
-#demo9 {
+#demo9,
+#InputB1,
+#InputB2,
+#InputB3,
+#InputB4,
+#InputB5,
+#InputB6{
     width: 6%;
     padding: 0px 9px;
     margin: 14px 2px;
+}
+
+
+#InputB1 {
+    position: relative;
+    right: 12.4em !important;
+}
+
+#InputB2 {
+    position: relative;
+    right: 11.4em !important;
+}
+
+#InputB3 {
+    position: relative;
+    right: 10em;
+}
+
+
+#InputB4 {
+    position: relative;
+    right: 7em;
+}
+
+#InputB5{
+    position: relative;
+    right: 3.8em;
+}
+
+#InputB6 {
+    position: relative;
+    right: 38%;
 }
 
 
@@ -797,6 +910,14 @@ input[type="phone"] {
     }
 
     #resultado-2-actividad {
+        display: inline-block;
+        width: 4%;
+        text-align: right;
+        height: 51px;
+    }
+
+    
+    #resultado-3-actividad {
         display: inline-block;
         width: 4%;
         text-align: right;
@@ -905,6 +1026,13 @@ input[type="phone"] {
     }
 
     #resultado-2-actividad {
+        display: inline-block;
+        width: 2%;
+        text-align: right;
+        height: 51px;
+    }
+
+    #resultado-3-actividad {
         display: inline-block;
         width: 2%;
         text-align: right;
@@ -1378,6 +1506,7 @@ input[type="phone"] {
 
 
     #mensajeActividad,
+    #mensajeActividad2,
     #mensajeActividadDemo {
         font-size: 12px;
         text-align: center;
