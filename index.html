@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicación de numero racionales</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+    <link rel="preload" href="styles.css" as="styles">
+    <link rel="preload" href="./bulma.min.css" as="styles">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="bulma.min.css">
+
+</head>
+
+<body onload="init()">
+    <div class="banderin">Unidad 4</div>
+    <div class="contendor-bienvenida">
+        <div class="contenido-actividad-bienvenida">
+            <div class="recuadro-explicacion-1 animate__animated animate__fadeIn" id="slide-1">
+                <div class="titulo-interactiva is-size-2 is-size-4-mobile">
+                    <h1 class="animate__animated animate__fadeInLeft" style="text-shadow: 2px 3px 2px #a0a0ba;">
+                        Suma de números racionales</h1>
+
+                    <!--<img src="./public/assets/Img/images/Personaje_inicio.png" />-->
+                    <p class="is-size-6-mobile animate__animated animate__fadeIn animate_delay-s5">A continuación podrás
+                        practicar haciendo varios ejercicios de Suma de números racionales con diferente signo.</p>
+                </div>
+
+
+            </div>
+            <div class="recuadro-explicacion-2 animate__animated animate__fadeIn" id="slide-2">
+                <div class="contenedor-ejercicio-demo">
+                    <h2 class="is-size-2 is-size-4-mobile">Ejercicio</h2>
+                    <p>Complete el procedimiento correspondiente a la multiplicación.</p>
+                    <div id="mensajeActividadDemo">
+                        <div>Se deben ingresar los campos.</div>
+                    </div>
+                    <div class="contenedor-inputs-1">
+                        <div style="width: 100%;text-align: right;" ">
+                          
+                            <input type="text" tabindex="1" id="demo1"  autocomplete="false"
+                                maxlength="3"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="1"  id="demo2"  autocomplete="false"
+                                maxlength="3"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="2"  id="demo3" autocomplete="false"
+                                maxlength="3"
+                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="2"  id="demo4"  autocomplete="false"
+                                maxlength="3"
+                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            
+
+
+                        </div>
+
+                        <div style="width: 100%;text-align: right;">
+                            <input type="text" tabindex="6"  id="demo5"  autocomplete="false"
+                                maxlength="2"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="6"  id="demo6"  autocomplete="false"
+                                maxlength="2"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        </div>
+                    </div>
+                    <div class="contenedor-resultados-demo" id="contenedorResultado">
+
+
+                        <div id="resultado-1">
+
+                        </div>
+                        <div id="resultado-2">
+
+                        </div>
+                    </div>
+                    <div class="botones-resultado">
+
+                        <div onclick="comprobar()" id="btnComprobar" class="button_comprobar">
+                            <div class="texto-boton">Comprobar</div>&nbsp;✍
+                        </div>
+                        <div onclick="siguiente()" id="btnContinuar-demo" class="button_continuar enabled">
+                            <div class="texto-boton">Siguiente</div>&nbsp;▶
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recuadro-explicacion-3 animate__animated animate__fadeIn" id="slide-3">
+                <h2 class="is-size-2 is-size-4-mobile">Ejercicio 1</h2>
+                <p>Este aplicativo nos ayudará a ejercitarnos en la multiplicación de números fraccionarios. Escribimos
+                    en las casillas los números correspondientes a las fracciones que deseamos multiplicar y su
+                    correspondiente desarrollo. la opción comprobar nos dará la oportunidad de varificar nuestras
+                    respuestas.</p>
+                <div id="mensajeActividad">
+                    <div>Se deben ingresar los campos.</div>
+                </div>
+                <div class="contenedor-inputs">
+
+                    <div style="width: 100%;text-align: center;">
+                        <input type="text" tabindex="1" id="input1" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="2" id="input2" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="3" id="input3" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="4" id="input4" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="5" id="input5" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="6" id="input6" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <input type="text" tabindex="7" id="input7" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                    </div>
+
+                    <div style="width: 100%;text-align: center;">
+
+                        <input type="text" tabindex="6" id="input8" size="2" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="7" id="input9" size="2" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="8" id="input10" size="2" autocomplete="false" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                        <input type="text" tabindex="9" id="input11" size="2" maxlength="3"
+                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    </div>
+
+                </div>
+
+                <div class="contenedor-resultados" id="contenedorResultado-actividad">
+
+
+                    <div id="resultado-1-actividad">
+
+                    </div>
+                    <div id="resultado-2-actividad">
+
+                    </div>
+                </div>
+                <div class="botones-resultado-actividad">
+                    <div onclick="repetirTextosEscena(1)" id="repetir2" alt="Repetir" class="button_repetir">
+                        <div class="texto-boton">Repetir</div>&nbsp;↻
+                    </div>
+                    <div onclick="comprobar()" id="btnComprobar" class="button_comprobar">
+                        <div class="texto-boton">Comprobar</div>&nbsp;✍
+                    </div>
+                    <div onclick="continuar()" id="btnContinuar" class="button_continuar enabled">
+                        <div class="texto-boton">Continuar</div>&nbsp;▶
+                    </div>
+                </div>
+
+            </div>
+            <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">
+                <div onclick="atras()" id="atras" class="button_atras" />◀&nbsp;Atras
+            </div>
+            <div onclick="siguiente()" id="siguiente" class="button_siguiente" />Siguiente&nbsp;▶
+        </div>
+        <div onclick="siguiente()" id="actividad" class="button_actividad" />Listo&nbsp;✍
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+    <!-- TODO -->
+    <!-- aun no configuro audios -->
+    <!-- <audio id="mireproductor" preload="none" src="./public/sounds/148.mp3"></audio> -->
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
