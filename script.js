@@ -1,6 +1,6 @@
 
 
-let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4','slide-5']
+let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4','slide-5','slide-6','slide-7']
 let audios_sond = ['Audio1', '', '']
 //Arrays Para configurar los numeros.
 let respuestasJuegoDemo = [5, 3, 7, 4, 4, 1, 4]
@@ -11,7 +11,11 @@ let respuestasJuegoActividad1 = [
 	{operacion2:[15]},
 	{resultado:[8,15]}
 ]
+
 let respuestasJuegoActividad2 = [8, -15, 6, 12, 12, -1, 12]
+
+let respuestasJuegoActividad4 = [72, 15, 80, 120, 167, , 120]
+let respuestasJuegoActividad5 = [35, 147, 135, 105, 317, , 105]
 
 let presentacion_slide = 0
 let audio;
@@ -181,6 +185,18 @@ function ReiniciarVariablesActividad() {
 			document.getElementById('resultado-1-actividad2').classList.remove('imagen-correcta')
 			document.getElementById('resultado-1-actividad2').classList.remove('imagen-incorrecta')
 			break;
+		case 4:
+			document.getElementById('resultado-2-actividad3').classList.remove('imagen-correcta')
+			document.getElementById('resultado-2-actividad3').classList.remove('imagen-incorrecta')
+			document.getElementById('resultado-1-actividad3').classList.remove('imagen-correcta')
+			document.getElementById('resultado-1-actividad3').classList.remove('imagen-incorrecta')
+			break;
+		case 5:
+			document.getElementById('resultado-2-actividad4').classList.remove('imagen-correcta')
+			document.getElementById('resultado-2-actividad4').classList.remove('imagen-incorrecta')
+			document.getElementById('resultado-1-actividad4').classList.remove('imagen-correcta')
+			document.getElementById('resultado-1-actividad4').classList.remove('imagen-incorrecta')
+			break;
 
 		default:
 			break;
@@ -251,7 +267,30 @@ function loadArrayInputsActividad3() {
 	return [input1Actividad3, input2Actividad3, input3Actividad3, input4Actividad3, input5Actividad3, input6Actividad3,input7Actividad3]
 }
 
+
+function loadArrayInputsActividad4() {
+	let input1Actividad4 = document.getElementById('InputD1').value//InputFormula1-0
+	let input2Actividad4 = document.getElementById('InputD2').value//InputFormula2-1
+	let input3Actividad4 = document.getElementById('InputD3').value//InputFormula3-2
+	let input4Actividad4 = document.getElementById('InputD4').value//Resultado1-3
+	let input5Actividad4 = document.getElementById('InputD5').value//Resultado2-4
+	let input6Actividad4 = document.getElementById('InputD6').value//InputFormula4-5
+	return [input1Actividad4, input2Actividad4, input3Actividad4, input4Actividad4, input5Actividad4, input6Actividad4]
+}
+
+function loadArrayInputsActividad5() {
+	let input1Actividad5 = document.getElementById('InputF1').value//InputFormula1-0
+	let input2Actividad5 = document.getElementById('InputF2').value//InputFormula2-1
+	let input3Actividad5 = document.getElementById('InputF3').value//InputFormula3-2
+	let input4Actividad5 = document.getElementById('InputF4').value//Resultado1-3
+	let input5Actividad5 = document.getElementById('InputF5').value//Resultado2-4
+	let input6Actividad5 = document.getElementById('InputF6').value//InputFormula4-5
+	return [input1Actividad5, input2Actividad5, input3Actividad5, input4Actividad5, input5Actividad5, input6Actividad5]
+}
+
+
 function mostrarMensajeActividad() {
+
 	switch (getCurrentSlider()) {
 		case 1:
 			document.getElementById('mensajeActividadDemo').style.visibility = 'visible'
@@ -269,6 +308,14 @@ function mostrarMensajeActividad() {
 		case 4:
 			document.getElementById('mensajeActividad3').style.visibility = 'visible'
 			document.getElementById('mensajeActividad3').style.color = 'red'
+			break;
+		case 5:
+			document.getElementById('mensajeActividad4').style.visibility = 'visible'
+			document.getElementById('mensajeActividad4').style.color = 'red'
+			break;
+		case 6:
+			document.getElementById('mensajeActividad5').style.visibility = 'visible'
+			document.getElementById('mensajeActividad5').style.color = 'red'
 			break;
 
 		default:
@@ -295,6 +342,14 @@ function ocultarMensajeActividad() {
 			document.getElementById('mensajeActividad3').style.visibility = 'hidden'
 			document.getElementById('mensajeActividad3').style.color = 'red'
 			break;
+		case 5:
+			document.getElementById('mensajeActividad4').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad4').style.color = 'red'
+			break;
+		case 6:
+			document.getElementById('mensajeActividad5').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad5').style.color = 'red'
+			break;
 
 		default:
 			break;
@@ -305,7 +360,6 @@ function comprobar() {
 	//Inputs actividad
 
 	//Inputs demo 
-
 	let arrayvalidador;
 	switch (getCurrentSlider()) {
 		case 1:
@@ -322,12 +376,22 @@ function comprobar() {
 		case 3:
 			ReiniciarVariablesActividad()
 			arrayvalidador = loadArrayInputsActividad2()
-			Actividad3(arrayvalidador);
+			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad2','resultado-2-actividad2','btnContinuar2','contenedorResultado-actividad2',respuestasJuegoActividad2);
 			break;
 		case 4:
 			ReiniciarVariablesActividad()
 			arrayvalidador = loadArrayInputsActividad3()
 			Actividad4(arrayvalidador,'resultado-1-actividad3','resultado-2-actividad3','contenedorResultado-actividad3');
+			break;
+		case 5:
+			ReiniciarVariablesActividad()
+			arrayvalidador = loadArrayInputsActividad4()
+			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad4','resultado-2-actividad4','btnContinuar4','contenedorResultado-actividad4',respuestasJuegoActividad4);
+			break;
+		case 6:
+			ReiniciarVariablesActividad()
+			arrayvalidador = loadArrayInputsActividad5()
+			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad5','resultado-2-actividad5','btnContinuar5','contenedorResultado-actividad5',respuestasJuegoActividad5);
 			break;
 
 		default:
@@ -423,8 +487,6 @@ function Actividad2(arrayInputs) {
 		ocultarMensajeActividad()
 		//validamos Inputs 1-2-3-4
 		//Validamos numeradoees
-		
-		
 		if(arrayInputs[0] == respuestasJuegoActividad1[0].numerador[0]){
 			if(arrayInputs[1] == respuestasJuegoActividad1[0].numerador[1]){
 				if(arrayInputs[2] == respuestasJuegoActividad1[0].numerador[2]){
@@ -496,7 +558,17 @@ function Actividad2(arrayInputs) {
 	}
 }
 
-function Actividad3(arrayInputs) {
+/**
+ * Funcion que verifica la actividad de 3 fraccionarios de diferentes denomindador.
+ * @param {Array de los inpys de la actividad} arrayInputs 
+ * @param {Id del contendor de resutado operacion1} idresultadoOperacion1 
+ * @param {Id del contendor de resutado operacion2} idresultadoOperacion2 
+ * @param {Id del boton de continuar para la actividad.} idbtnContinuar 
+ * @param {Id del contenedor resultado.} idContenedorResultado 
+ * @param {Array de respuestas de la actividad} arrayRespuestas 
+ */
+
+function ActividadTresFraccionarios(arrayInputs,idresultadoOperacion1,idresultadoOperacion2,idbtnContinuar,idContenedorResultado,arrayRespuestas) {
 
 	let resultadofind = arrayInputs.includes("")
 
@@ -512,7 +584,7 @@ function Actividad3(arrayInputs) {
 	if (camposValidos) {
 		ocultarMensajeActividad()
 		//Validamos las 3 primaras cajas.
-		if (arrayInputs[0] == respuestasJuegoActividad2[0] && arrayInputs[1] == respuestasJuegoActividad2[1] && arrayInputs[2] == respuestasJuegoActividad2[2]) {
+		if (arrayInputs[0] == arrayRespuestas[0] && arrayInputs[1] == arrayRespuestas[1] && arrayInputs[2] == arrayRespuestas[2]) {
 			operacion1 = true
 		} else {
 			operacion1 = operacion1
@@ -520,7 +592,7 @@ function Actividad3(arrayInputs) {
 
 
 		//validamos la ultima caja de la formula.
-		if (arrayInputs[5] == respuestasJuegoActividad2[3]) {
+		if (arrayInputs[5] == arrayRespuestas[3]) {
 			operacion2 = true
 		} else {
 			operacion2 = operacion2
@@ -528,37 +600,39 @@ function Actividad3(arrayInputs) {
 
 		if (operacion1 && operacion2) {
 			/* document.getElementById('contenedorResultado').style.visibility = "visible" */
-			document.getElementById('resultado-1-actividad2').classList.add('imagen-correcta')
 			
-			console.log(arrayInputs[3], respuestasJuegoActividad2[0] + (respuestasJuegoActividad2[1]) + respuestasJuegoActividad2[2]);
-			console.log(arrayInputs[3], respuestasJuegoActividad2[0], respuestasJuegoActividad2[1],respuestasJuegoActividad2[2]);
+			document.getElementById(idresultadoOperacion1).classList.add('imagen-correcta')
+			
+			console.log(arrayInputs[3], arrayRespuestas[0] + (arrayRespuestas[1]) + arrayRespuestas[2]);
+			console.log(arrayInputs[3], arrayRespuestas[0], arrayRespuestas[1],arrayRespuestas[2]);
 
-			if (arrayInputs[3] == ((respuestasJuegoActividad2[0] + (respuestasJuegoActividad2[1])) + respuestasJuegoActividad2[2])) {
+			if (arrayInputs[3] == ((arrayRespuestas[0] + (arrayRespuestas[1])) + arrayRespuestas[2])) {
 				numerador = true
 			} else {
 				numerador = numerador
 			}
 
-			if (arrayInputs[5] == respuestasJuegoActividad2[6]) {
+			if (arrayInputs[5] == arrayRespuestas[6]) {
 				denominador = true
 			} else {
 				denominador = denominador
 			}
+			
 			if (numerador == true && denominador == true) {
-				document.getElementById('btnContinuar').classList.remove('enabled')
-				document.getElementById('contenedorResultado-actividad2').style.visibility = "visible"
-				document.getElementById('resultado-2-actividad2').classList.add('imagen-correcta')
+				document.getElementById(idbtnContinuar).classList.remove('enabled')
+				document.getElementById(idContenedorResultado).style.visibility = "visible"
+				document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
 
 			}
 			else {
-				document.getElementById('btnContinuar').classList.add('enabled')
-				document.getElementById('contenedorResultado-actividad2').style.visibility = "visible"
-				document.getElementById('resultado-2-actividad2').classList.add('imagen-incorrecta')
+				document.getElementById(idbtnContinuar).classList.add('enabled')
+				document.getElementById(idContenedorResultado).style.visibility = "visible"
+				document.getElementById(idresultadoOperacion2).classList.add('imagen-incorrecta')
 
 
 			}
 		} else {
-			document.getElementById('resultado-1-actividad2').classList.add('imagen-incorrecta')
+			document.getElementById(idresultadoOperacion1).classList.add('imagen-incorrecta')
 		}
 
 	}
