@@ -1,6 +1,6 @@
 
 
-let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4','slide-5','slide-6','slide-7']
+let sliders = ['slide-1', 'slide-2', 'slide-3','slide-4','slide-5','slide-6','slide-7','slide-8','slide-9']
 let audios_sond = ['Audio1', '', '']
 //Arrays Para configurar los numeros.
 let respuestasJuegoDemo = [5, 3, 7, 4, 4, 1, 4]
@@ -12,10 +12,35 @@ let respuestasJuegoActividad1 = [
 	{resultado:[8,15]}
 ]
 
-let respuestasJuegoActividad2 = [8, -15, 6, 12, 12, -1, 12]
+let respuestasJuegoActividad2 = [
+	8,//numerador
+	-15,// numerador
+	6,// numerador
+	12, // denominador
+	-1, // numerador
+	12 // denominador
+]
 
-let respuestasJuegoActividad4 = [72, 15, 80, 120, 167, , 120]
-let respuestasJuegoActividad5 = [35, 147, 135, 105, 317, , 105]
+
+
+let respuestasJuegoActividad4 = [
+	72,//numerador
+	15,//numerador
+	80,//numerador
+	120, //denominador
+	167,//numerador
+	120//denominador
+]
+let respuestasJuegoActividad5 = [35, 147, 135, 105, 317 , 105]
+let respuestasJuegoActividad6 = [75, 36, 80, 30, 191, 30]
+let respuestasJuegoActividad7 = [
+	48,//Input1 - numerador
+	18,//Input2 - numerador
+	28,//Input3 - numerador
+	36,//Input1 - denominador
+	94,//Resultado - numerador
+	36//Resultado - denominador
+]
 
 let presentacion_slide = 0
 let audio;
@@ -64,7 +89,7 @@ function presentacionteclado(e) {
 	}
 
 	if (e.keyCode == 37) {
-		if (getCurrentSlider() == 0 || getCurrentSlider() == 2) {
+		if (getCurrentSlider() == 0) {
 
 		} else {
 			atras()
@@ -106,19 +131,20 @@ function presentacion() {
 	if (presentacion_slide == 0) {
 		document.getElementById('siguiente').style.display = "inline-block"
 		document.getElementById('atras').style.visibility = "hidden"
+		document.getElementById('atras').style.display = "inline-block"
 		//document.getElementById('visubility').style.display = "inline-block"
 
-	} /* else if (presentacion_slide == sliders.length - 3) {
+	}  else if (presentacion_slide == sliders.length - 1) {
+		document.getElementById('siguiente').style.display = "none"
+		//document.getElementById('atras').style.display = "none"
+		document.getElementById('atras').style.visibility = "none"
+		document.getElementById('siguiente').style.display = "none"
+	/* 	changeSound(audios_sond[presentacion_slide]) */
+	} 
+	else {
 		document.getElementById('siguiente').style.display = "none"
 		//document.getElementById('atras').style.display = "none"
 		document.getElementById('atras').style.visibility = "hidden"
-		document.getElementById('siguiente').style.display = "none"
-	/* 	changeSound(audios_sond[presentacion_slide]) */
-	//} 
-	else {
-		document.getElementById('siguiente').style.display = "none"
-		document.getElementById('atras').style.display = "none"
-		document.getElementById('atras').style.visibility = "visible"
 		document.getElementById('actividad').style.display = "none"
 
 	}
@@ -196,6 +222,26 @@ function ReiniciarVariablesActividad() {
 			document.getElementById('resultado-2-actividad4').classList.remove('imagen-incorrecta')
 			document.getElementById('resultado-1-actividad4').classList.remove('imagen-correcta')
 			document.getElementById('resultado-1-actividad4').classList.remove('imagen-incorrecta')
+			break;
+		case 6:
+			document.getElementById('resultado-2-actividad5').classList.remove('imagen-correcta')
+			document.getElementById('resultado-2-actividad5').classList.remove('imagen-incorrecta')
+			document.getElementById('resultado-1-actividad5').classList.remove('imagen-correcta')
+			document.getElementById('resultado-1-actividad5').classList.remove('imagen-incorrecta')
+				break;
+		case 7:
+			
+			document.getElementById('resultado-1-actividad6').classList.remove('imagen-correcta')
+			document.getElementById('resultado-1-actividad6').classList.remove('imagen-incorrecta')
+			document.getElementById('resultado-2-actividad6').classList.remove('imagen-correcta')
+			document.getElementById('resultado-2-actividad6').classList.remove('imagen-incorrecta')
+			break;
+		case 8:
+			
+			document.getElementById('resultado-1-actividad7').classList.remove('imagen-correcta')
+			document.getElementById('resultado-1-actividad7').classList.remove('imagen-incorrecta')
+			document.getElementById('resultado-2-actividad7').classList.remove('imagen-correcta')
+			document.getElementById('resultado-2-actividad7').classList.remove('imagen-incorrecta')
 			break;
 
 		default:
@@ -288,6 +334,26 @@ function loadArrayInputsActividad5() {
 	return [input1Actividad5, input2Actividad5, input3Actividad5, input4Actividad5, input5Actividad5, input6Actividad5]
 }
 
+function loadArrayInputsActividad6() {
+	let input1Actividad6 = document.getElementById('InputG1').value//InputFormula1-0
+	let input2Actividad6 = document.getElementById('InputG2').value//InputFormula2-1
+	let input3Actividad6 = document.getElementById('InputG3').value//InputFormula3-2
+	let input4Actividad6 = document.getElementById('InputG4').value//Resultado1-3
+	let input5Actividad6 = document.getElementById('InputG5').value//Resultado2-4
+	let input6Actividad6 = document.getElementById('InputG6').value//InputFormula4-5
+	return [input1Actividad6, input2Actividad6, input3Actividad6, input4Actividad6, input5Actividad6, input6Actividad6]
+}
+
+function loadArrayInputsActividad7() {
+	let input1Actividad7 = document.getElementById('InputH1').value//InputFormula1-0
+	let input2Actividad7 = document.getElementById('InputH2').value//InputFormula2-1
+	let input3Actividad7 = document.getElementById('InputH3').value//InputFormula3-2
+	let input4Actividad7 = document.getElementById('InputH4').value//Resultado1-3
+	let input5Actividad7 = document.getElementById('InputH5').value//Resultado2-4
+	let input6Actividad7 = document.getElementById('InputH6').value//InputFormula4-5
+	return [input1Actividad7, input2Actividad7, input3Actividad7, input4Actividad7, input5Actividad7, input6Actividad7]
+}
+
 
 function mostrarMensajeActividad() {
 
@@ -317,7 +383,14 @@ function mostrarMensajeActividad() {
 			document.getElementById('mensajeActividad5').style.visibility = 'visible'
 			document.getElementById('mensajeActividad5').style.color = 'red'
 			break;
-
+		case 7:
+			document.getElementById('mensajeActividad6').style.visibility = 'visible'
+			document.getElementById('mensajeActividad6').style.color = 'red'
+			break;
+		case 8:
+			document.getElementById('mensajeActividad7').style.visibility = 'visible'
+			document.getElementById('mensajeActividad7').style.color = 'red'
+			break;
 		default:
 			break;
 	}
@@ -349,6 +422,14 @@ function ocultarMensajeActividad() {
 		case 6:
 			document.getElementById('mensajeActividad5').style.visibility = 'hidden'
 			document.getElementById('mensajeActividad5').style.color = 'red'
+			break;
+		case 7:
+			document.getElementById('mensajeActividad6').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad6').style.color = 'red'
+			break;
+		case 8:
+			document.getElementById('mensajeActividad7').style.visibility = 'hidden'
+			document.getElementById('mensajeActividad7').style.color = 'red'
 			break;
 
 		default:
@@ -392,6 +473,16 @@ function comprobar() {
 			ReiniciarVariablesActividad()
 			arrayvalidador = loadArrayInputsActividad5()
 			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad5','resultado-2-actividad5','btnContinuar5','contenedorResultado-actividad5',respuestasJuegoActividad5);
+			break;
+		case 7:
+			ReiniciarVariablesActividad()
+			arrayvalidador = loadArrayInputsActividad6()
+			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad6','resultado-2-actividad6','btnContinuar6','contenedorResultado-actividad6',respuestasJuegoActividad6);
+			break;
+		case 8:
+			ReiniciarVariablesActividad()
+			arrayvalidador = loadArrayInputsActividad7()
+			ActividadTresFraccionarios(arrayvalidador,'resultado-1-actividad7','resultado-2-actividad7','btnContinuar7','contenedorResultado-actividad7',respuestasJuegoActividad7);
 			break;
 
 		default:
@@ -603,8 +694,7 @@ function ActividadTresFraccionarios(arrayInputs,idresultadoOperacion1,idresultad
 			
 			document.getElementById(idresultadoOperacion1).classList.add('imagen-correcta')
 			
-			console.log(arrayInputs[3], arrayRespuestas[0] + (arrayRespuestas[1]) + arrayRespuestas[2]);
-			console.log(arrayInputs[3], arrayRespuestas[0], arrayRespuestas[1],arrayRespuestas[2]);
+			
 
 			if (arrayInputs[3] == ((arrayRespuestas[0] + (arrayRespuestas[1])) + arrayRespuestas[2])) {
 				numerador = true
@@ -612,10 +702,12 @@ function ActividadTresFraccionarios(arrayInputs,idresultadoOperacion1,idresultad
 				numerador = numerador
 			}
 
-			if (arrayInputs[5] == arrayRespuestas[6]) {
+			if (arrayInputs[4] == arrayRespuestas[5]) {
 				denominador = true
+				
 			} else {
 				denominador = denominador
+				
 			}
 			
 			if (numerador == true && denominador == true) {
@@ -625,6 +717,7 @@ function ActividadTresFraccionarios(arrayInputs,idresultadoOperacion1,idresultad
 
 			}
 			else {
+				
 				document.getElementById(idbtnContinuar).classList.add('enabled')
 				document.getElementById(idContenedorResultado).style.visibility = "visible"
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-incorrecta')
@@ -694,13 +787,13 @@ function Actividad4(arrayInputs,idresultadoOperacion1,idresultadoOperacion2,idCo
 
 			
 			if (numerador == true && denominador == true) {
-				document.getElementById('btnContinuar-demo').classList.remove('enabled')
+				document.getElementById('btnContinuar3').classList.remove('enabled')
 				document.getElementById(idContenedorResultado).style.visibility = "visible"
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
 
 			}
 			else {
-				document.getElementById('btnContinuar-demo').classList.add('enabled')
+				document.getElementById('btnContinuar3').classList.add('enabled')
 				document.getElementById(idContenedorResultado).style.visibility = "visible"
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-incorrecta')
 

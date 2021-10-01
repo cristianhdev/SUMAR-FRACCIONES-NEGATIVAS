@@ -44,25 +44,11 @@ h6 {
 
 p,
 span {
-    font-size: 1em;
+    font-size: 0.8em;
     font-family: @font-family-text;
     text-align: center;
 }
 
-.banderin {
-    background-color: @color-banderin;
-    color: white;
-    position: absolute;
-    transform: rotate(-45deg);
-    padding: 15px 65px;
-    margin-left: -65px;
-    left: 0px;
-    top: 0px;
-    font-size: 1.4em;
-    text-align: center;
-    margin-top: 20px;
-    z-index: 99999
-}
 
 .contendor-bienvenida {
     display: flex;
@@ -107,7 +93,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 74vh;
+    height: 60vh;
     pointer-events: none;
 }
 
@@ -131,7 +117,9 @@ span {
 #mensajeActividad2, 
 #mensajeActividad3,
 #mensajeActividad4,
-#mensajeActividad5, 
+#mensajeActividad5,
+#mensajeActividad6,
+#mensajeActividad7, 
 #mensajeActividadDemo {
     text-align: center;
     display: inline-block;
@@ -285,6 +273,37 @@ input[type="phone"] {
     margin: 0px auto;
 }
 
+.contenedor-inputs-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url(./public/assets/Img/images/operadores7.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18vh;
+    background-size: contain;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.contenedor-inputs-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url(./public/assets/Img/images/operadores8.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18vh;
+    background-size: contain;
+    width: 100%;
+    margin: 0px auto;
+}
+
+
 
 
 .contenedor .row {
@@ -299,7 +318,9 @@ input[type="phone"] {
 #slide-4,
 #slide-5,
 #slide-6,
-#slide-7 {
+#slide-7,
+#slide-8,
+#slide-9 {
     display: none
 }
 
@@ -581,7 +602,10 @@ input[type="phone"] {
 .recuadro-explicacion-2,
 .recuadro-explicacion-4,
 .recuadro-explicacion-5,
-.recuadro-explicacion-6 {
+.recuadro-explicacion-6,
+.recuadro-explicacion-7,
+.recuadro-explicacion-8,
+.recuadro-explicacion-9 {
     height: 85%;
 }
 
@@ -602,11 +626,14 @@ input[type="phone"] {
 .contenedor-resultados-juego2,
 .contenedor-resultados-juego3,
 .contenedor-resultados-juego4,
-.contenedor-resultados-juego5 {
+.contenedor-resultados-juego5,
+.contenedor-resultados-juego6,
+.contenedor-resultados-juego7 {
     width: 100%;
     /* padding-right: 89px; */
     display: flex;
     justify-content: flex-end;
+    height:30px
 }
 
 
@@ -724,6 +751,42 @@ input[type="phone"] {
     padding-top: 0px;
 }
 
+#resultado-1-actividad6 {
+    width: 11%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+
+
+#resultado-2-actividad6 {
+    width: 35%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+#resultado-1-actividad7 {
+    width: 11%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+
+
+#resultado-2-actividad7 {
+    width: 35%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
 
 #resultado-3-actividad1 {
     display: inline-block;
@@ -757,10 +820,6 @@ input[type="phone"] {
 
 
 
-#demo2 {
-    position: relative;
-    right: 25%;
-}
 
 
 #input4 {
@@ -820,28 +879,28 @@ input[type="phone"] {
 
 #demo1 {
     position: relative;
-    right: 12.4em !important;
+    right: 212px !important;
 }
 
 #demo2 {
     position: relative;
-    right: 11.4em !important;
+    right: 181px !important;
 }
 
 #demo3 {
     position: relative;
-    right: 10em;
+    right: 156px !important;
 }
 
 
 #demo4 {
     position: relative;
-    right: 7em;
+    right: 107px !important;
 }
 
 #demo5{
     position: relative;
-    right: 3.8em;
+    right: 57px !important;
 }
 
 #demo6 {
@@ -849,26 +908,7 @@ input[type="phone"] {
     right: 38%;
 }
 
-#demo7 {
-    position: relative;
-    left: -9%;
-}
 
-
-#demo8 {
-    position: relative;
-    left: 4px;
-}
-
-#demo9 {
-    position: relative;
-    left: 54px;
-}
-
-#demo10 {
-    position: relative;
-    left: 19%;
-}
 
 #input1,
 #input2,
@@ -907,7 +947,15 @@ input[type="phone"] {
 #InputF1,
 #InputF2,
 #InputF3,
-#InputF4{
+#InputF4,
+#InputG1,
+#InputG2,
+#InputG3,
+#InputG4,
+#InputH1,
+#InputH2,
+#InputH3,
+#InputH4{
     width: 6%;
     padding: 0px 9px;
     margin: 14px 2px;
@@ -916,7 +964,11 @@ input[type="phone"] {
 #InputD5,
 #InputD6,
 #InputF5,
-#InputF6{
+#InputF6,
+#InputG5,
+#InputG6,
+#InputH6,
+#InputH6{
     width: 8%;
     padding: 0px 9px;
     margin: 14px 2px;
@@ -924,36 +976,48 @@ input[type="phone"] {
   
 
 
-#InputB1,#InputD1,#InputF1 {
+#InputB1,#InputD1,#InputF1,#InputG1,#InputH1 {
     position: relative;
-    right: 12.4em !important;
+    right: 200px !important;
 }
 
-#InputB2,#InputD2,#InputF2 {
+#InputB2,#InputD2,#InputF2,#InputG2,#InputH2 {
     position: relative;
-    right: 11.4em !important;
+    right: 181px !important;
 }
 
-#InputB3,#InputD3,#InputF3 {
+#InputB3,#InputD3,#InputF3,#InputG3,#InputH3 {
     position: relative;
-    right: 10em;
+    right: 164px !important;
 }
 
 
-#InputB4,#InputD4,#InputF4 {
+#InputB4,#InputD4,#InputF4,#InputG4,#InputH4{
     position: relative;
-    right: 7em;
+    right: 112px !important;
 }
 
-#InputB5,#InputD5,#InputF5{
+#InputH5{
     position: relative;
-    right: 3.8em;
+    right: 112px !important;
+}
+#InputB5{
+    position: relative;
+    right: 59px !important;
 }
 
-#InputB6,#InputD6,#InputF6 {
+#InputD5,#InputF5
+{
+    position: relative;
+    right: 36px !important;
+}
+
+#InputB6,#InputD6,#InputF6,#InputG5,#InputH6{
     position: relative;
     right: 38%;
 }
+
+
 
 #InputC1{
     position: relative;
@@ -962,7 +1026,7 @@ input[type="phone"] {
 
 #InputC2{
     position: relative;
-    left: -31px;
+    left: -26px;
 }
 
 #InputC3{
@@ -985,10 +1049,27 @@ input[type="phone"] {
 }
 
 
+#InputG5{
+    position: relative;
+    left: -34px
+}
+#InputG6{
+    position: relative;
+    right: 271px;
+}
+
+#InputH5{
+    position: relative;
+    left: -50px
+}
+#InputH6{
+    position: relative;
+    right: 275px;
+}
 
 #InputC7{
     position: relative;
-    left: -100px;
+    left: -88px;
 }
 
 #InputC8{
@@ -1022,26 +1103,7 @@ input[type="phone"] {
 
 
 
-    #input1,
-    #input6 {
-        position: relative;
-        left: -14%;
-    }
-
-    #input2,
-    #input7 {
-        position: relative;
-        left: 18%;
-    }
-
-
-
-
-    #input10,
-    #input5 {
-        position: relative;
-        left: 9%;
-    }
+    
 
 
 
