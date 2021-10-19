@@ -3,9 +3,6 @@
 
 
 
-html {
-    overflow: hidden !important;
-}
 
 
 
@@ -13,7 +10,7 @@ body,
 html {
     padding: 0px;
     margin: 0px;
-    
+
 }
 
 h1,
@@ -44,11 +41,72 @@ h6 {
 
 p,
 span {
-    font-size: 0.8em;
+    font-size: 1em;
     font-family: @font-family-text;
     text-align: center;
 }
 
+/* Este codigo es nuevo */
+.contenedor-fracciones,
+.contenedor-fracciones-libre {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: 140px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: 'Calibri';
+    font-weight: bold;
+    color: green;
+    margin: 0px auto;
+}
+
+.contenedor-fracciones .row-fraccion {
+    width: 30px;
+}
+
+.signo {
+    color: red;
+    font-weight: bold;
+}
+
+.contenedor-fracciones hr {
+    border: 2px solid red
+}
+
+.contenedor-fracciones-libre hr {
+    border: 2px solid red;
+
+
+}
+
+.contenedor-fracciones .row-fraccion {
+    width: 30px;
+}
+
+.contenedor-fracciones-libre .row-fraccion {
+    width: 60px;
+}
+
+.contenedor-fracciones-3-bloques {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.table-scrolling {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: auto;
+    pointer-events: all;
+}
+
+/* fin codigo nuevo*/
 
 .contendor-bienvenida {
     display: flex;
@@ -62,7 +120,7 @@ span {
 }
 
 
-.contenido-actividad-bienvenida{
+.contenido-actividad-bienvenida {
     border: 13px #a538ab double;
     border-radius: 28px 28px;
     width: 65%;
@@ -75,7 +133,7 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
@@ -114,12 +172,12 @@ span {
 }
 
 #mensajeActividad,
-#mensajeActividad2, 
+#mensajeActividad2,
 #mensajeActividad3,
 #mensajeActividad4,
 #mensajeActividad5,
 #mensajeActividad6,
-#mensajeActividad7, 
+#mensajeActividad7,
 #mensajeActividadDemo {
     text-align: center;
     display: inline-block;
@@ -160,10 +218,12 @@ input[type="phone"] {
     background-color: #cecece;
     text-align: center;
     font-size: 18px;
-    font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 5%;
+    font-family: 'Calibri', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 49px;
     height: 56%;
-    color: black
+    color: black;
+    margin: 0px 7px;
+
 }
 
 
@@ -189,120 +249,30 @@ input[type="phone"] {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores1.png);
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 89px;
     background-size: cover;
     width: 100%;
     margin: 0px auto;
 }
 
-.contenedor-inputs-1 {
+.contenedor-inputs-1,
+.contenedor-inputs-2,
+.contenedor-inputs-3,
+.contenedor-inputs-4,
+.contenedor-inputs-5,
+.contenedor-inputs-6,
+.contenedor-inputs-7,
+.contenedor-inputs-8 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
+    height: 25vh;
     background-size: contain;
     width: 100%;
     margin: 0px auto;
 }
-
-.contenedor-inputs-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: contain;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.contenedor-inputs-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores4.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: 77%;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.contenedor-inputs-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores5.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: contain;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.contenedor-inputs-5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores6.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: contain;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.contenedor-inputs-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores7.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: contain;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.contenedor-inputs-7 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-image: url(./public/assets/Img/images/operadores8.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 18vh;
-    background-size: contain;
-    width: 100%;
-    margin: 0px auto;
-}
-
 
 
 
@@ -355,7 +325,7 @@ input[type="phone"] {
     font: 18px Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #E5FFFF;
-   .btn-mixin-background-hover();
+    .btn-mixin-background-hover();
 
 }
 
@@ -629,37 +599,62 @@ input[type="phone"] {
 .contenedor-resultados-juego5,
 .contenedor-resultados-juego6,
 .contenedor-resultados-juego7 {
-    width: 100%;
-    /* padding-right: 89px; */
-    display: flex;
-    justify-content: flex-end;
-    height:30px
+    width: 780px;
+    display: inline-flex;
+    justify-content: end;
+    height: 30px;
 }
 
 
-   
+
+
 
 .contenedor-resultados-demo {
-    width: 100%;
-    padding-right: 89px;
+    width: 585px;
+    /* padding-right: 89px; */
     display: flex;
     justify-content: flex-end;
 }
 
 
 #resultado-1 {
-    width: 36%;
+    width: 45%;
     display: inline-flex;
     text-align: right;
     height: 51px;
     padding-top: 0px;
-  }
-  #resultado-2 {
+}
+
+#resultado-2 {
     display: inline-block;
     width: 16%;
     text-align: right;
     height: 51px;
-  }
+}
+
+#resultado-1-actividad1 {
+    width: 40%;
+    display: inline-flex;
+    text-align: right;
+    height: 51px;
+    padding-top: 0px;
+}
+
+#resultado-2-actividad1 {
+    display: inline-block;
+    width: 29% !important;
+    text-align: center;
+    height: 51px;
+}
+
+
+#resultado-3-actividad1 {
+    display: inline-block;
+    width: 9% !important;
+    text-align: right;
+    height: 51px;
+}
+
 
 #resultado-1-actividad {
     width: 37%;
@@ -669,20 +664,6 @@ input[type="phone"] {
     padding-top: 0px;
 }
 
-#resultado-1-actividad1 {
-    width: 24%;
-    display: inline-flex;
-    text-align: right;
-    height: 51px;
-    padding-top: 0px;
-}
-
-#resultado-2-actividad1 {
-    display: inline-block;
-    width: 16% !important;
-    text-align: center;
-    height: 51px;
-}
 
 #resultado-1-actividad2 {
     width: 15%;
@@ -700,11 +681,10 @@ input[type="phone"] {
 }
 
 #resultado-1-actividad3 {
-    width: 15%;
-    display: inline-flex;
+    display: inline-block;
+    width: 18% !important;
     text-align: right;
     height: 51px;
-    padding-top: 0px;
 }
 
 #resultado-2-actividad3 {
@@ -788,12 +768,6 @@ input[type="phone"] {
 }
 
 
-#resultado-3-actividad1 {
-    display: inline-block;
-    width: 18% !important;
-    text-align: right;
-    height: 51px;
-}
 
 #resultado-2-actividad {
     display: inline-block;
@@ -809,273 +783,6 @@ input[type="phone"] {
     height: 51px;
 }
 
-
-
-
-
-#input1 {
-    position: relative;
-    right: -25px;
-}
-
-
-
-
-
-#input4 {
-    position: relative;
-    left: 7%;
-}
-
-
-#input3 {
-    position: relative;
-    left: 54px;
-}
-
-#input2 {
-    position: relative;
-    left: 32px;
-}
-
-
-
-#input5 {
-    position: relative;
-    right: -11%;
-}
-
-#input6 {
-    position: relative;
-    left: 13%;
-}
-
-
-#input8 {
-    position: relative;
-    left: -4%;
-}
-
-#input9 {
-    position: relative;
-    left: 6%;
-}
-
-#input7 {
-    position: relative;
-    left: 20%;
-}
-
-#input10 {
-    position: relative;
-    left: 162px;
-}
-
-#input11 {
-    position: relative;
-    left: 31%;
-    
-}
-
-#demo1 {
-    position: relative;
-    right: 212px !important;
-}
-
-#demo2 {
-    position: relative;
-    right: 181px !important;
-}
-
-#demo3 {
-    position: relative;
-    right: 156px !important;
-}
-
-
-#demo4 {
-    position: relative;
-    right: 107px !important;
-}
-
-#demo5{
-    position: relative;
-    right: 57px !important;
-}
-
-#demo6 {
-    position: relative;
-    right: 38%;
-}
-
-
-
-#input1,
-#input2,
-#input3,
-#input4,
-#input6,
-#input7,
-#input8,
-#input9,
-#demo1,
-#demo2,
-#demo3,
-#demo4,
-#demo5,
-#demo6,
-#demo7,
-#demo8,
-#demo9,
-#InputB1,
-#InputB2,
-#InputB3,
-#InputB4,
-#InputB5,
-#InputB6,
-#InputC1,
-#InputC2,
-#InputC3,
-#InputC4,
-#InputC5,
-#InputC6,
-#InputC7,
-#InputD1,
-#InputD2,
-#InputD3,
-#InputD4,
-#InputF1,
-#InputF2,
-#InputF3,
-#InputF4,
-#InputG1,
-#InputG2,
-#InputG3,
-#InputG4,
-#InputH1,
-#InputH2,
-#InputH3,
-#InputH4{
-    width: 6%;
-    padding: 0px 9px;
-    margin: 14px 2px;
-}
-
-#InputD5,
-#InputD6,
-#InputF5,
-#InputF6,
-#InputG5,
-#InputG6,
-#InputH6,
-#InputH6{
-    width: 8%;
-    padding: 0px 9px;
-    margin: 14px 2px;
-}
-  
-
-
-#InputB1,#InputD1,#InputF1,#InputG1,#InputH1 {
-    position: relative;
-    right: 200px !important;
-}
-
-#InputB2,#InputD2,#InputF2,#InputG2,#InputH2 {
-    position: relative;
-    right: 181px !important;
-}
-
-#InputB3,#InputD3,#InputF3,#InputG3,#InputH3 {
-    position: relative;
-    right: 164px !important;
-}
-
-
-#InputB4,#InputD4,#InputF4,#InputG4,#InputH4{
-    position: relative;
-    right: 112px !important;
-}
-
-#InputH5{
-    position: relative;
-    right: 112px !important;
-}
-#InputB5{
-    position: relative;
-    right: 59px !important;
-}
-
-#InputD5,#InputF5
-{
-    position: relative;
-    right: 36px !important;
-}
-
-#InputB6,#InputD6,#InputF6,#InputG5,#InputH6{
-    position: relative;
-    right: 38%;
-}
-
-
-
-#InputC1{
-    position: relative;
-    left: 13px;
-}
-
-#InputC2{
-    position: relative;
-    left: -26px;
-}
-
-#InputC3{
-    position: relative;
-    left: -35px;
-}
-
-#InputC4{
-    position: relative;
-    left: -40px;
-}
-
-#InputC6{
-    position: relative;
-    left: -21px;
-}
-#InputC5{
-    position: relative;
-    left: -30px;
-}
-
-
-#InputG5{
-    position: relative;
-    left: -34px
-}
-#InputG6{
-    position: relative;
-    right: 271px;
-}
-
-#InputH5{
-    position: relative;
-    left: -50px
-}
-#InputH6{
-    position: relative;
-    right: 275px;
-}
-
-#InputC7{
-    position: relative;
-    left: -88px;
-}
-
-#InputC8{
-    position: relative;
-    left: -53px;
-}
 
 /* 
   ##Device = Desktops
@@ -1103,7 +810,7 @@ input[type="phone"] {
 
 
 
-    
+
 
 
 
@@ -1119,6 +826,7 @@ input[type="phone"] {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     /* CSS */
+
 
     #resultado-1 {
         width: 59%;
@@ -1150,7 +858,7 @@ input[type="phone"] {
         height: 51px;
     }
 
-    
+
     #resultado-3-actividad {
         display: inline-block;
         width: 4%;
@@ -1166,26 +874,6 @@ input[type="phone"] {
     }
 
 
-    #input1,
-    #input6 {
-        position: relative;
-        left: -14%;
-    }
-
-    #input2,
-    #input7 {
-        position: relative;
-        left: -10%;
-    }
-
-
-
-
-    #input10,
-    #input5 {
-        position: relative;
-        left: 9%;
-    }
 
 
     .contenedor-titulo {
@@ -1195,6 +883,7 @@ input[type="phone"] {
     .contenedor-inputs-1 {
         background-size: contain;
         width: 97%;
+        height: 33vh;
     }
 
     h1,
@@ -1225,7 +914,6 @@ input[type="phone"] {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     /* CSS */
-
 
 
     .contenedor-resultados {
@@ -1273,34 +961,9 @@ input[type="phone"] {
         height: 51px;
     }
 
-    #input1 {
-        position: relative;
-        left: -21%;
-    }
-
-    #input2 {
-        position: relative;
-        left: -15%;
-    }
-
-    #input6 {
-        position: relative;
-        left: -21%;
-    }
-
-
-    #input10,
-    #input5 {
-        position: relative;
-        left: 16%;
-    }
 
 
 
-    #input7 {
-        position: relative;
-        left: -15%;
-    }
 
 
     .contenedor-titulo {
@@ -1332,7 +995,7 @@ input[type="phone"] {
     .contendor-bienvenida {
         display: flex;
         width: 100%;
-        height: 590px;
+        height: 600px;
     }
 
     h1,
@@ -1345,36 +1008,6 @@ input[type="phone"] {
     }
 
 
-
-
-    #input1 {
-        position: relative;
-        left: -21%;
-    }
-
-    #input2 {
-        position: relative;
-        left: -15%;
-    }
-
-    #input6 {
-        position: relative;
-        left: -21%;
-    }
-
-
-    #input10,
-    #input5 {
-        position: relative;
-        left: 16%;
-    }
-
-
-
-    #input7 {
-        position: relative;
-        left: -15%;
-    }
 
     .circulo-banner {
         border: 2px solid red;
@@ -1398,73 +1031,9 @@ input[type="phone"] {
         width: 97%;
     }
 
-    #input1,
-    #input2,
-    #input3,
-    #input4,
-    #input5,
-    #input6,
-    #input7,
-    #input8,
-    #input9,
-    #input10,
-    #demo1,
-    #demo2,
-    #demo3,
-    #demo4,
-    #demo6,
-    #demo7,
-    #demo5
-    #demo8,
-    #demo9,
-    #demo10  {
-        width: 30px;
-        padding: 0px 0px;
-        margin: 4px 2px
-    }
 
 
 
-    #demo1 {
-        position: relative;
-        left: -20%;
-    }
-
-    #demo2 {
-        position: relative;
-        left: -14%;
-    }
-
-
-    #demo3 {
-        position: relative;
-        left: -24px;
-    }
-
-    #demo4 {
-        position: relative;
-        left: -29px;
-    }
-
-    #demo6 {
-        position: relative;
-        left: -20%;
-    }
-
-    #demo7 {
-        position: relative;
-        left: -14%;
-    }
-
-    #demo8 {
-        position: relative;
-        left: -23px;
-    }
-
-    #demo9 {
-        position: relative;
-        left: 6px;
-    }
 
 }
 
@@ -1485,6 +1054,23 @@ input[type="phone"] {
 
     }
 
+    .contenedor-inputs-1,
+    .contenedor-inputs-2,
+    .contenedor-inputs-4,
+    .contenedor-inputs-5,
+    .contenedor-inputs-6,
+    .contenedor-inputs-7,
+    .contenedor-inputs-8 {
+        width: max-content;
+        height: 26vh;
+
+    }
+
+    .contenedor-inputs-2,.contenedor-inputs-3{
+        width: max-content;
+        height: 130px;
+    }
+
     .button_siguiente {
 
         padding: 8px 8px;
@@ -1495,23 +1081,32 @@ input[type="phone"] {
         padding: 8px 8px;
     }
 
+   
+
+
+    .contenido-actividad-bienvenida{
+        height:500px
+    }
+ 
+
+
 
     .contenedor-titulo {
         width: 300px;
     }
 
     input[type="text"] {
-        font-size: 12px;
-        height: 15px;
+        font-size: 16px;
+        height: 24px;
     }
 
-
-
-
-    /* .contenedor .row{
-      flex-direction: column;
-    }  */
     #resultado-1 {
+        width: 28%;
+    }
+    #resultado-2 {
+        width: 35%;
+    }
+    /*  #resultado-1 {
         width: 109px;
         display: inline-block;
         text-align: right;
@@ -1525,24 +1120,21 @@ input[type="phone"] {
         text-align: right;
         height: 40px;
 
+    } */
+
+    #resultado-1-actividad1 {
+        width: 55%;
+    } 
+
+    #resultado-2-actividad1 {
+        width: 16% !important;
+    }
+
+    #resultado-3-actividad1 {
+        width: 20% !important;
     }
 
 
-    #resultado-1-actividad {
-        width: 119px;
-        display: inline-block;
-        text-align: right;
-        height: 40px;
-        padding-top: 0px;
-    }
-
-    #resultado-2-actividad {
-        display: inline-block;
-        width: 25px;
-        text-align: right;
-        height: 40px;
-
-    }
 
 
     .recuadro-explicacion-1,
@@ -1552,42 +1144,6 @@ input[type="phone"] {
         height: 87%;
     }
 
-    #input1,
-    #input2,
-    #input3,
-    #input4,
-    #input6,
-    #input7,
-    #input8,
-    #input9,
-    #demo1,
-    #demo2,
-    #demo3,
-    #demo4,
-    #demo6,
-    #demo7,
-    #demo8,
-    #demo9,
-    #InputC1,
-    #InputC2,
-    #InputC3,
-    #InputC4,
-    #InputC5,
-    #InputC6,
-    #InputC7{
-        width: 19px;
-        padding: 0px 0px;
-        margin: 4px 2px
-    }
-
-    #input5,
-    #input10,
-    #demo5,
-    #demo10 {
-        width: 30px;
-        padding: 0px 0px;
-        margin: 4px 2px
-    }
 
 
     .contenedor-inputs {
@@ -1600,9 +1156,24 @@ input[type="phone"] {
 
     .contenedor-inputs-1 {
         background-size: contain;
-        width: 102%;
+        width: max-content;
+        height: 170px;
     }
 
+    .contenedor-resultados-juego2 {
+       
+        width: 572px;
+
+    }
+
+
+    #resultado-1-actividad2 {
+        width: 29%;
+    }
+
+    #resultado-2-actividad2 {
+        width: 33% !important;
+    }
 
     .contenedor-resultados {
         width: 93%;
@@ -1613,78 +1184,7 @@ input[type="phone"] {
     }
 
 
-    #input1 {
-        position: relative;
-        left: -14px;
-    }
 
-    #input6 {
-        position: relative;
-        left: -7%;
-    }
-
-    #input2 {
-        position: relative;
-        left: -5%;
-    }
-
-    #input7 {
-        position: relative;
-        left: -5%;
-    }
-
-
-
-    #demo1 {
-        position: relative;
-        left: -11%;
-    }
-
-    #demo2 {
-        position: relative;
-        left: -11%;
-    }
-
-
-    #demo3 {
-        position: relative;
-        left: -5px;
-    }
-
-    #demo4 {
-        position: relative;
-        left: -50px;
-    }
-
-    #demo5 {
-        position: relative;
-        left: 1%;
-    }
-
-    #demo6 {
-        position: relative;
-        left: -11%;
-    }
-
-    #demo7 {
-        position: relative;
-        left: -53px;
-    }
-
-    #demo8 {
-        position: relative;
-        left: -5px;
-    }
-
-    #demo9 {
-        position: relative;
-        left: -5px;
-    }
-
-    #demo10 {
-        position: relative;
-        left: 9%;
-    }
 
 
     .botones-resultado {
@@ -1760,5 +1260,18 @@ input[type="phone"] {
         width: 100%;
         height: 30px;
     }
+
+    .table-scrolling {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        height: 170px;
+        pointer-events: all;
+    }
+
+    .contenedor-fracciones,
+.contenedor-fracciones-libre {
+    width: -webkit-fill-available;
+}
 
 }

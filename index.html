@@ -12,8 +12,6 @@
     <link rel="preload" href="./bulma.min.css" as="styles">
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    
-    <link rel="stylesheet" type="text/css" href="bulma.min.css">
 
 </head>
 
@@ -35,49 +33,88 @@
             <div class="recuadro-explicacion-2 animate__animated animate__fadeIn" id="slide-2">
                 <div class="contenedor-ejercicio-demo">
                     <h2 class="is-size-2 is-size-4-mobile">Ejercicio 1</h2>
-                    <p>Igual denominador.</p>
+                    <p>1. Igual denominador.</p>
                     <div id="mensajeActividadDemo">
                         <div>Se deben ingresar los campos.</div>
                     </div>
-                    <div class="contenedor-inputs-1">
-                        <div style="width: 100%;text-align: right;" ">
-                          
-                            <input type="text" tabindex="1" id="demo1"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="2"  id="demo2"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="3"  id="demo3" autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="4"  id="demo4"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <div class="table-scrolling">
+                        
+                            <div class="contenedor-inputs-1">
+                                <div class="contenedor-fracciones">
+                                    <div class="row-fraccion">
+                                        5
+                                        <hr>4
+                                    </div>
+                                    <div class=" row-fraccion signo">
+                                        +
+                                    </div>
+                                    <div class="row-fraccion">
+                                        3
+                                        <hr>4
+                                    </div>
+                                    <div class="signo row-fraccion">-</div>
+                                    <div class="row-fraccion">
+                                        7
+                                        <hr>4
+                                    </div>
+                                    <div class="signo row-fraccion">=</div>
+                                    <div style="width: 237px;">
+                                        <div class="contenedor-fracciones-3-bloques">
+                                            <div>
+                                                <input type="text" class="input"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                            </div>
+                                            <div class="signo">+</div>
+                                            <div>
+                                                <input type="text" class="input"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                            </div>
+                                            <div class="signo">-</div>
+                                            <div>
+                                                <input type="text" class="input"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                    </div>
+                                    <div class="signo row-fraccion">=</div>
+                                    <div class="row-fraccion">
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                        <div>
+                                            <hr style="width:70px">
+                                        </div>
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="contenedor-resultados-demo" id="contenedorResultado">
+    
+    
+                                    <div id="resultado-1">
+            
+                                    </div>
+                                    <div id="resultado-2">
+            
+                                    </div>
+                                </div>
+                            </div>
                             
-
-
-                        </div>
-
-                        <div style="width: 100%;text-align: right;">
-                            <input type="text" tabindex="5"  id="demo5"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="6"  id="demo6"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        </div>
+                        
+                       
                     </div>
-                    <div class="contenedor-resultados-demo" id="contenedorResultado">
-
-
-                        <div id="resultado-1">
-
-                        </div>
-                        <div id="resultado-2">
-
-                        </div>
-                    </div>
+                   
                     <div class="botones-resultado">
 
                         <div onclick="comprobar()" id="btnComprobar" class="button_comprobar">
@@ -91,60 +128,126 @@
             </div>
             <div class="recuadro-explicacion-3 animate__animated animate__fadeIn" id="slide-3">
                 <h2 class="is-size-2 is-size-4-mobile">Ejercicio 2</h2>
-                <p>Este aplicativo nos ayudará a ejercitarnos en la multiplicación de números fraccionarios. Escribimos
-                    en las casillas los números correspondientes a las fracciones que deseamos multiplicar y su
-                    correspondiente desarrollo. la opción comprobar nos dará la oportunidad de varificar nuestras
-                    respuestas.</p>
+                <p>2. Distinto denominador.</p>
                 <div id="mensajeActividad">
                     <div>Se deben ingresar los campos.</div>
                 </div>
-                <div class="contenedor-inputs">
+                <div class="table-scrolling">
+                    <div class="contenedor-inputs-2">
+                        <div class="contenedor-fracciones">
+                            <div class="row-fraccion">
+                                6
+                                <hr>5
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                -2
+                                <hr>3
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div style="width: 326px;">
+                                <div class="contenedor-fracciones-3-bloques">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">.</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">.</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                        ">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">.</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
 
-                    <div style="width: 100%;text-align: center;">
-                        <input type="text" tabindex="1" id="input1" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="2" id="input2" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="3" id="input3" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="4" id="input4" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="5" id="input5" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="6" id="input6" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="7" id="input7" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div>
+                                <div style="
+                                display: flex;
+                            ">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr style="width: 140px;">
+                                </div>
+                                <div>
 
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div class="row-fraccion">
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div>
+                                    <hr style="width:70px">
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contenedor-resultados-juego1" id="contenedorResultado-actividad">
+
+
+                            <div id="resultado-1-actividad1">
+        
+                            </div>
+                            <div id="resultado-2-actividad1">
+        
+                            </div>
+                            <div id="resultado-3-actividad1">
+        
+                            </div>
+                        </div>
                     </div>
-
-                    <div style="width: 100%;text-align: center;">
-
-                        <input type="text" tabindex="6" id="input8" size="2" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="7" id="input9" size="2" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="8" id="input10" size="2" autocomplete="false" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="9" id="input11" size="2" maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    </div>
-
                 </div>
 
-                <div class="contenedor-resultados-juego1" id="contenedorResultado-actividad">
-
-
-                    <div id="resultado-1-actividad1">
-
-                    </div>
-                    <div id="resultado-2-actividad1">
-
-                    </div>
-                    <div id="resultado-3-actividad1">
-
-                    </div>
-                </div>
+               
                 <div class="botones-resultado-actividad">
                     <div onclick="repetirTextosEscena(1)" id="repetir2" alt="Repetir" class="button_repetir">
                         <div class="texto-boton">Repetir</div>&nbsp;↻
@@ -165,45 +268,80 @@
                     <div id="mensajeActividad2">
                         <div>Se deben ingresar los campos.</div>
                     </div>
-                    <div class="contenedor-inputs-2">
-                        <div style="width: 100%;text-align: right;" >
-                          
-                            <input type="text" tabindex="1" id="InputB1"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="2"  id="InputB2"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="3"  id="InputB3" autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="4"  id="InputB4"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            
-
+                    <div class="table-scrolling">
+                        <div class="contenedor-inputs-3">
+                            <div class="contenedor-fracciones">
+                                <div class="row-fraccion">
+                                    2
+                                    <hr>3
+                                </div>
+                                <div class=" row-fraccion signo">
+                                    -
+                                </div>
+                                <div class="row-fraccion">
+                                    5
+                                    <hr>4
+                                </div>
+                                <div class="signo row-fraccion">+</div>
+                                <div class="row-fraccion">
+                                    1
+                                    <hr>2
+                                </div>
+                                <div class="signo row-fraccion">=</div>
+                                <div style="width: 237px;">
+                                    <div class="contenedor-fracciones-3-bloques">
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                        <div class="signo">+</div>
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                        <div class="signo">+</div>
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div class="signo row-fraccion">=</div>
+                                <div class="row-fraccion">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div>
+                                        <hr style="width:70px">
+                                    </div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
+                        <div class="contenedor-resultados-juego2" id="contenedorResultado-actividad2">
 
-                        <div style="width: 100%;text-align: right;">
-                            <input type="text" tabindex="5"  id="InputB5"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="6"  id="InputB6"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                            <div id="resultado-1-actividad2">
+    
+                            </div>
+                            <div id="resultado-2-actividad2">
+    
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor-resultados-juego2" id="contenedorResultado-actividad2">
-
-
-                        <div id="resultado-1-actividad2">
-
-                        </div>
-                        <div id="resultado-2-actividad2">
-
-                        </div>
-                    </div>
+                   
                     <div class="botones-resultado">
 
                         <div onclick="comprobar()" id="btnComprobar" class="button_comprobar">
@@ -222,41 +360,67 @@
                     <div id="mensajeActividad3">
                         <div>Se deben ingresar los campos.</div>
                     </div>
-                    <div class="contenedor-inputs-3">
-                        <div style="width: 100%;text-align: left;display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;align-content: space-evenly;" >
-                            <input type="text" tabindex="1" id="InputC1"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="1" id="InputC2"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="2"  id="InputC3"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="3"  id="InputC4" autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="4"  id="InputC5"  autocomplete="false"
-                                maxlength="3"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        </div>
+                    <div class="table-scrolling">
+                        <div class="contenedor-inputs-4">
+                            <div class="contenedor-fracciones-libre">
+                                <div class="row-fraccion">
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    <hr style="width:69px ">
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div class=" row-fraccion signo">
+                                    +
+                                </div>
+                                <div class="row-fraccion">
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    <hr style="width:69px ">
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div class="signo row-fraccion">=</div>
+                                <div style="width: 170px;">
+                                    <div class="contenedor-fracciones-3-bloques">
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
+                                        <div class="signo">+</div>
+                                        <div>
+                                            <input type="text" class="input"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                        </div>
 
-                        <div style="width: 100%;text-align: left;display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;align-content: space-evenly;">
-                            <input type="text" tabindex="5"  id="InputC6"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="6"  id="InputC7"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                <input type="text" tabindex="7"  id="InputC8"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                            <input type="text" tabindex="8"  id="InputC9"  autocomplete="false"
-                                maxlength="2"
-                                oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                                
+                                    </div>
+                                    <div>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div class="signo row-fraccion">=</div>
+                                <div class="row-fraccion">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div>
+                                        <hr style="width:70px">
+                                    </div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
                     <div class="contenedor-resultados-juego3" id="contenedorResultado-actividad3">
 
 
@@ -284,35 +448,75 @@
                 <div id="mensajeActividad4">
                     <div>Se deben ingresar los campos.</div>
                 </div>
-                <div class="contenedor-inputs-4">
-                    <div style="width: 100%;text-align: right;" >
-                      
-                        <input type="text" tabindex="1" id="InputD1"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="2"  id="InputD2"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="3"  id="InputD3" autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="4"  id="InputD4"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        
+                <div class="table-scrolling">
+                    <div class="contenedor-inputs-5">
+                        <div class="contenedor-fracciones-libre">
+                            <div class="row-fraccion">
+                                <input type="text" value="4" readonly>
+                                <hr style="width:69px ">
+                                <input type="text" value="3" readonly>
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text"  value="2" readonly>
+                                <hr style="width:69px ">
+                                <input type="text" value="4" readonly>
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text" value="7" readonly>
+                                <hr style="width:69px ">
+                                <input type="text" value="9" readonly>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div style="width: 250px;">
+                                <div class="contenedor-fracciones-3-bloques">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div class="row-fraccion">
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div>
+                                    <hr style="width:70px">
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                        </div>
 
-
-                    </div>
-
-                    <div style="width: 100%;text-align: right;">
-                        <input type="text" tabindex="5"  id="InputD5"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="6"  id="InputD6"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     </div>
                 </div>
+
                 <div class="contenedor-resultados-juego4" id="contenedorResultado-actividad4">
 
 
@@ -340,32 +544,79 @@
                 <div id="mensajeActividad5">
                     <div>Se deben ingresar los campos.</div>
                 </div>
-                <div class="contenedor-inputs-5">
-                    <div style="width: 100%;text-align: right;" >
-                      
-                        <input type="text" tabindex="1" id="InputF1"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="2"  id="InputF2"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="3"  id="InputF3" autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="4"  id="InputF4"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    </div>
+                <div class="table-scrolling">
+                    <div class="contenedor-inputs-6">
+                        <div class="contenedor-fracciones-libre">
+                            <div class="row-fraccion">
+                                <input type="text"  value="3" readonly>
+                                <hr style="width:69px ">
+                                <input type="text"  value="5" readonly>
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text" value="1" readonly
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                <hr style="width:69px ">
+                                <input type="text" value="8" readonly
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
 
-                    <div style="width: 100%;text-align: right;">
-                        <input type="text" tabindex="5"  id="InputF5"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="6"  id="InputF6"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text"  value="2" readonly
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                <hr style="width:69px ">
+                                <input type="text"  value="3" readonly
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div style="width: 250px;">
+                                <div class="contenedor-fracciones-3-bloques">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div class="row-fraccion">
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div>
+                                    <hr style="width:70px">
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="contenedor-resultados-juego5" id="contenedorResultado-actividad5">
 
 
@@ -393,30 +644,72 @@
                 <div id="mensajeActividad6">
                     <div>Se deben ingresar los campos.</div>
                 </div>
-                <div class="contenedor-inputs-6">
-                    <div style="width: 100%;text-align: right;" >
-                      
-                        <input type="text" tabindex="1" id="InputG1"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="2"  id="InputG2"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="3"  id="InputG3" autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="4"  id="InputG4"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    </div>
+                <div class="table-scrolling">
+                    <div class="contenedor-inputs-7">
+                        <div class="contenedor-fracciones-libre">
+                            <div class="row-fraccion">
+                                <input type="text" value="1" readonly>
+                                <hr style="width:69px ">
+                                <input type="text" value="3" readonly>
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text"  value="7" readonly>
+                                <hr style="width:69px ">
+                                <input type="text"  value="5" readonly>
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text"  value="9" readonly>
+                                <hr style="width:69px ">
+                                <input type="text"  value="7" readonly>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div style="width: 250px;">
+                                <div class="contenedor-fracciones-3-bloques">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div class="row-fraccion">
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div>
+                                    <hr style="width:70px">
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                        </div>
 
-                    <div style="width: 100%;text-align: right;">
-                        <input type="text" tabindex="5"  id="InputG5"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="6"  id="InputG6"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     </div>
                 </div>
                 <div class="contenedor-resultados-juego6" id="contenedorResultado-actividad6">
@@ -446,30 +739,74 @@
                 <div id="mensajeActividad7">
                     <div>Se deben ingresar los campos.</div>
                 </div>
-                <div class="contenedor-inputs-7">
-                    <div style="width: 100%;text-align: right;" >
-                      
-                        <input type="text" tabindex="1" id="InputH1"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="2"  id="InputH2"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="3"  id="InputH3" autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="4"  id="InputH4"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    </div>
+                <div class="table-scrolling">
+                    <div class="contenedor-inputs-8">
+                        <div class="contenedor-fracciones-libre">
+                            <div class="row-fraccion">
+                                <input type="text" value="5" readonly>
+                                <hr style="width:69px ">
+                                <input type="text"  value="2" readonly>
 
-                    <div style="width: 100%;text-align: right;">
-                        <input type="text" tabindex="5"  id="InputH5"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        <input type="text" tabindex="6"  id="InputH6"  autocomplete="false"
-                            maxlength="3"
-                            oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text" value="6" readonly>
+                                <hr style="width:69px ">
+                                <input type="text"  value="5" readonly>
+
+                            </div>
+                            <div class=" row-fraccion signo">
+                                +
+                            </div>
+                            <div class="row-fraccion">
+                                <input type="text"  value="8" readonly>
+                                <hr style="width:69px ">
+                                <input type="text" value="3" readonly>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div style="width: 250px;">
+                                <div class="contenedor-fracciones-3-bloques">
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                    <div class="signo">+</div>
+                                    <div>
+                                        <input type="text" class="input"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                            <div class="signo row-fraccion">=</div>
+                            <div class="row-fraccion">
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                                <div>
+                                    <hr style="width:70px">
+                                </div>
+                                <div>
+                                    <input type="text" class="input"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="contenedor-resultados-juego7" id="contenedorResultado-actividad7">
