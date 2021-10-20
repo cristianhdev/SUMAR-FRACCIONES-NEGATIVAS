@@ -399,20 +399,20 @@ function comprobar() {
 }
 
 
-function Actividad1(arrayInputs) {
-	console.log(arrayInputs)
-
-
+function validarCamposVacios(Inputs){
 	let valoresInput = []
 
-	arrayInputs.forEach((element) => {
+	Inputs.forEach((element) => {
 		valoresInput.push(element.value)
 	})
 
+	return valoresInput.includes("")
+}
 
-	console.log(valoresInput);
+function Actividad1(arrayInputs) {
+	
 
-	let resultadofind = valoresInput.includes("")
+	let resultadofind = validarCamposVacios(arrayInputs)
 
 
 	if (!resultadofind) {
@@ -422,12 +422,9 @@ function Actividad1(arrayInputs) {
 		mostrarMensajeActividad()
 	}
 
-	console.log(camposValidos)
-
 	if (camposValidos) {
 		ocultarMensajeActividad()
 		//Validamos las 3 primaras cajas.
-		console.log(arrayInputs[0].value, respuestasJuegoDemo[0], arrayInputs[1].value, respuestasJuegoDemo[1], arrayInputs[2].value, respuestasJuegoDemo[2])
 		if (arrayInputs[0].value == respuestasJuegoDemo[0] && arrayInputs[1].value == respuestasJuegoDemo[1] && arrayInputs[2].value == respuestasJuegoDemo[2]) {
 			operacion1 = true
 		} else {
@@ -447,9 +444,6 @@ function Actividad1(arrayInputs) {
 		if (operacion1 && operacion2) {
 			/* document.getElementById('contenedorResultado').style.visibility = "visible" */
 			document.getElementById('resultado-1').classList.add('imagen-correcta')
-
-
-			console.log(arrayInputs[4].value,(respuestasJuegoDemo[0] + respuestasJuegoDemo[1]) - respuestasJuegoDemo[2]);
 			if (arrayInputs[4].value == ((respuestasJuegoDemo[0] + respuestasJuegoDemo[1]) - respuestasJuegoDemo[2])) {
 				numerador = true
 			} else {
@@ -462,8 +456,6 @@ function Actividad1(arrayInputs) {
 				denominador = denominador
 			}
 
-			console.log(numerador);
-			console.log(denominador);
 			if (numerador == true && denominador == true) {
 				document.getElementById('btnContinuar-demo').classList.remove('enabled')
 				document.getElementById('contenedorResultado').style.visibility = "visible"
@@ -486,13 +478,7 @@ function Actividad1(arrayInputs) {
 
 function Actividad2(arrayInputs) {
 
-	let valoresInput = []
-
-	arrayInputs.forEach((element) => {
-		valoresInput.push(element.value)
-	})
-
-	let resultadofind = valoresInput.includes("")
+	let resultadofind = validarCamposVacios(arrayInputs)
 
 
 	if (!resultadofind) {
@@ -528,7 +514,7 @@ function Actividad2(arrayInputs) {
 		//Validamos operacion1 denominadores.
 
 		if (arrayInputs[4].value == respuestasJuegoActividad1[1].denominador[0]) {
-			console.log('aca 1')
+	
 
 			if (arrayInputs[5].value == respuestasJuegoActividad1[1].denominador[1]) {
 				operacion2 = true
@@ -609,13 +595,9 @@ function Actividad2(arrayInputs) {
 
 function ActividadTresFraccionarios(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, idbtnContinuar, idContenedorResultado, arrayRespuestas) {
 
-	let valoresInput = []
+	
 
-	arrayInputs.forEach((element) => {
-		valoresInput.push(element.value)
-	})
-
-	let resultadofind = valoresInput.includes("")
+	let resultadofind = validarCamposVacios(arrayInputs)
 
 
 	if (!resultadofind) {
@@ -693,13 +675,9 @@ function ActividadTresFraccionarios(arrayInputs, idresultadoOperacion1, idresult
  * @param {Representa el id del contenedor que muestra el resultado} idContenedorResultado 
  */
 function Actividad4(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, idContenedorResultado) {
-	let valoresInput = []
+	
 
-	arrayInputs.forEach((element) => {
-		valoresInput.push(element.value)
-	})
-
-	let resultadofind = valoresInput.includes("")
+	let resultadofind = validarCamposVacios(arrayInputs)
 
 
 	if (!resultadofind) {
@@ -713,7 +691,6 @@ function Actividad4(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, i
 	if (camposValidos) {
 		ocultarMensajeActividad()
 		//Validamos las 2 primaras cajas.
-		console.log(arrayInputs)
 		if (arrayInputs[4].value == (parseInt(arrayInputs[0].value) * parseInt(arrayInputs[3].value))) {
 			operacion1 = true
 		} else {
@@ -729,7 +706,6 @@ function Actividad4(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, i
 			operacion2 = operacion2
 		}
 
-		console.log(arrayInputs[6].value, (parseInt(arrayInputs[1].value) * parseInt(arrayInputs[3].value)))
 		if (arrayInputs[6].value == (parseInt(arrayInputs[1].value) * parseInt(arrayInputs[3].value))) {
 			operacion3 = true
 		} else {
@@ -761,9 +737,6 @@ function Actividad4(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, i
 					} else {
 						denominador = denominador
 					}
-
-					console.log(numerador);
-					console.log(denominador);
 
 
 					if (numerador == true && denominador == true) {
@@ -804,17 +777,6 @@ function repetirTextosEscena(slide) {
 }
 
 function continuar() {
-	document.getElementById('input1').value = ""
-	document.getElementById('input2').value = ""
-	document.getElementById('input3').value = ""
-	document.getElementById('input4').value = ""
-	document.getElementById('input5').value = ""
-	document.getElementById('input6').value = ""
-	document.getElementById('input7').value = ""
-	document.getElementById('input8').value = ""
-	document.getElementById('input9').value = ""
-	document.getElementById('input10').value = ""
-	document.getElementById('input11').value = ""
 	document.getElementById('btnContinuar').classList.add('enabled')
 	ReiniciarVariablesActividad()
 }
