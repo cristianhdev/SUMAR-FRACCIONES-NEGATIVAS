@@ -58,7 +58,7 @@ let camposValidos = false;
 
 
 function init() {
-	document.body.addEventListener('keyup', presentacionteclado, false)
+	/* document.body.addEventListener('keyup', presentacionteclado, false) */
 	document.getElementById('siguiente').addEventListener('mouseover', btnSoundOver, false)
 	document.getElementById('siguiente').addEventListener('mouseout', btnSoundOut, false)
 	document.getElementById('atras').addEventListener('mouseover', btnSoundOver, false)
