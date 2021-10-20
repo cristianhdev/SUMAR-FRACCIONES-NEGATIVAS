@@ -647,14 +647,17 @@ function ActividadTresFraccionarios(arrayInputs, idresultadoOperacion1, idresult
 			}
 
 			if (numerador == true && denominador == true) {
-				document.getElementById(idbtnContinuar).classList.remove('enabled')
+				/* document.getElementById(idbtnContinuar).classList.remove('enabled') */
 				document.getElementById(idContenedorResultado).style.visibility = "visible"
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
+				if(getCurrentSlider()== sliders.length-1){
+					document.getElementById('repetir2').classList.remove('enabled')
+				}
 
 			}
 			else {
 
-				document.getElementById(idbtnContinuar).classList.add('enabled')
+				/* document.getElementById(idbtnContinuar).classList.add('enabled') */
 				document.getElementById(idContenedorResultado).style.visibility = "visible"
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-incorrecta')
 
@@ -743,6 +746,7 @@ function Actividad4(arrayInputs, idresultadoOperacion1, idresultadoOperacion2, i
 						document.getElementById('btnContinuar3').classList.remove('enabled')
 						document.getElementById(idContenedorResultado).style.visibility = "visible"
 						document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
+						document.getElementById('repetir2').classList.remove('imagen-correcta')
 
 					}
 					else {
