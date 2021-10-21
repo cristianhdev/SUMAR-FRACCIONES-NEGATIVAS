@@ -652,6 +652,8 @@ function ActividadTresFraccionarios(arrayInputs, idresultadoOperacion1, idresult
 				document.getElementById(idresultadoOperacion2).classList.add('imagen-correcta')
 				if(getCurrentSlider()== sliders.length-1){
 					document.getElementById('repetir2').classList.remove('enabled')
+				}else{
+					document.getElementById(idbtnContinuar).classList.remove('enabled')
 				}
 
 			}
